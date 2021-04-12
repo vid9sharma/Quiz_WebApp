@@ -1,0 +1,15 @@
+﻿@model Quiz
+
+<div class="container h-100" style="margin-top:30px">
+    <h1>Your Score is: @Model.Score out of 10</h1>
+    @if (Model.Score >= 8)
+    {
+        <h3 style="color:green">You have successfully passed the test.</h3>
+    }
+    else
+    {
+        <h3 style="color:red">Unfortunately you did not pass the test. Please try again later!</h3>
+    }
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Go To Home</a>
+    <a asp-controller="Home" asp-action="Details" class="btn btn-primary">View Previous Quizzes</a>
+</div>

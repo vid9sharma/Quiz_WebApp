@@ -1,0 +1,40 @@
+﻿body {
+    background-color: #92b9f7;
+    color: #000000;
+}
+
+/* Styles for table elements */
+table {
+    border: 0.1em solid #000000;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Style specifies border and padding for th and td elements */
+th, td {
+    border: 0.1em solid #000000;
+    padding: 0.5em;
+}
+
+tr:nth-child(even) {
+    background-color: #dadee6;
+    color: #000000;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+tr:hover {
+    background-color: #828a99;
+    color: #FFFFFF;
+}
+
+/* Style for th element */
+th {
+    background-color: #1e2d7b;
+    color: #FFFFFF;
+}

@@ -1,0 +1,25 @@
+﻿@model QuizViewModel
+<div class="container">
+    <form asp-action="Result" method="post">
+        <h4>Question @ViewBag.QuesNo: @Model.QuestionText</h4>
+
+        <div style="margin-left:30px">
+            @foreach (var option in Model.Options)
+            {
+                <div class="form-group">
+                    <input type="radio" asp-for="SelectedOptionId" value="@option.OptionId" />  @option.OptionText
+                </div>
+            }
+
+            <input type="hidden" asp-for="QuestionId" />
+            <input type="hidden" asp-for="CorrectAnswer" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="float:left">@ViewBag.Action</button>
+    </form>
+    @if (@ViewBag.Previous)
+    {
+        <a asp-action="Previous" asp-route-id="@Model.QuestionId" class="btn btn-primary" style="margin-left:20px">Previous</a>
+    }
+</div>
+

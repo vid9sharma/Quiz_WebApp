@@ -1,0 +1,25 @@
+﻿@model List<Quiz>
+
+<div class="container">
+    <h2>Past Quizzes</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Score</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var quiz in Model)
+            {
+                <tr>
+                    <td>@quiz.Score</td>
+                    <td>@quiz.QuizDate.ToString("dd MMM yyyy")</td>
+                    <td>@quiz.QuizDate.ToString("hh:mm tt")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Go To Home</a>
+</div>
